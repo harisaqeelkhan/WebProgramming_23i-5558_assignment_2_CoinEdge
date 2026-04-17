@@ -1,0 +1,215 @@
+/* Fonts aur variables ki file ko import kar rahe hain */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import './styles/variables.css';
+
+/* Basic CSS reset, sab default margins aur paddings hatane ke liye */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page ki base styling aur smooth scrolling */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Body setup (font, text color, background) taake puri app consistent lage */
+body {
+  font-family: var(--font-family);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  min-height: 100vh;
+}
+
+/* Anchor tags (links) ka design aur unke hover/focus states */
+a {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-primary-glow);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Images ko responsive aur thora rounded banane ke liye */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
+}
+
+/* Default button styles taake sab clickable items uniform lagain */
+button {
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-size: var(--text-base);
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  padding: var(--space-sm) var(--space-lg);
+  font-weight: var(--weight-medium);
+  transition: all var(--transition-base);
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--color-primary-glow);
+  outline-offset: 2px;
+}
+
+/* Form elements (input, dropdown, textarea) ki basic aur focus styling */
+input,
+select,
+textarea {
+  font-family: var(--font-family);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background: var(--color-bg-input);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-sm) var(--space-md);
+  transition: all var(--transition-fast);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  background: var(--color-bg-card-hover);
+  border-color: var(--color-primary-glow);
+  box-shadow: 0 0 0 2px var(--color-primary-glow);
+}
+
+/* Jab user text select kare toh color kaisa dikhe */
+::selection {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+
+/* Main page container jisme sab content aayega */
+.page-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+  padding-top: calc(var(--navbar-height) + var(--space-xl));
+  animation: fadeIn 0.4s ease;
+}
+
+/* UI States: Loading spinner, error messages, aur empty state */
+.loading-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: var(--space-3xl) auto;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-3xl);
+  color: var(--color-text);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-lg);
+}
+
+.error-message {
+  background: var(--color-error-bg);
+  color: var(--color-error);
+  border: 1px solid var(--color-error);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  font-weight: var(--weight-medium);
+}
+
+.empty-state {
+  text-align: center;
+  padding: var(--space-3xl);
+  color: var(--color-text-secondary);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-2xl);
+  background: var(--color-surface);
+}
+
+.empty-state h3 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-md);
+  color: var(--color-text);
+  font-weight: var(--weight-bold);
+}
+
+.empty-state p {
+  margin-bottom: var(--space-xl);
+  font-size: var(--text-lg);
+}
+
+/* Specific button variations (Primary, Secondary, Success) */
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-light);
+}
+
+.btn-secondary {
+  background: var(--color-bg-elevated);
+  color: var(--color-text);
+}
+
+.btn-secondary:hover {
+  background: var(--color-surface);
+}
+
+.btn-success {
+  background: var(--color-success);
+  color: var(--color-text-inverse);
+}
+
+.btn-success:hover {
+  background: #a3e635;
+}
+
+/* Section heading aur root element */
+.section-title {
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--space-lg);
+  color: var(--color-text);
+}
+
+#root {
+  min-height: 100vh;
+}

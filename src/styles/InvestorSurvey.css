@@ -1,0 +1,110 @@
+.profile-form {
+  background: var(--color-bg-card);
+  border: 4px solid var(--color-text);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  box-shadow: 6px 6px 0 var(--color-text);
+}
+
+.profile-form-title {
+  font-size: var(--text-2xl);
+  font-weight: 900;
+  color: var(--color-text);
+  text-transform: uppercase;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.form-field-label {
+  font-size: var(--text-sm);
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.form-field-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.form-field-radio {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text);
+  background: var(--color-bg-elevated);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-text);
+  box-shadow: 2px 2px 0 var(--color-text);
+  transition: transform 0.1s ease;
+}
+
+.form-field-radio:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--color-text);
+}
+
+.form-field-radio input[type="radio"] {
+  accent-color: var(--color-primary);
+}
+
+.form-field-radio-selected {
+  background: var(--color-primary);
+  color: white;
+}
+
+.form-field-error {
+  color: var(--color-error);
+  font-size: var(--text-xs);
+  font-weight: bold;
+}
+
+.form-field select,
+.form-field input[type="number"] {
+  max-width: 300px;
+  border: 2px solid var(--color-text);
+  padding: 8px;
+  font-weight: 600;
+}
+
+.profile-form-submit {
+  align-self: center;
+  padding: var(--space-md) var(--space-xl);
+  font-weight: 800;
+  width: 100%;
+}
+
+.profile-form-success {
+  color: var(--color-success);
+  font-size: var(--text-sm);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  animation: fadeIn 0.3s ease;
+}
+
+.profile-form-match-count {
+  margin-top: var(--space-md);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  padding: var(--space-md);
+  background: var(--color-bg-elevated);
+  border-radius: var(--radius-md);
+}
+
+.profile-form-match-count strong {
+  color: var(--color-primary-light);
+}

@@ -1,0 +1,174 @@
+/* Root variables setup, puri app ki styling yahan se control hogi (Dark theme base) */
+:root {
+  /* Main colors aur unke light/dark shades */
+  --color-primary: #ffffff;
+  --color-primary-light: #f3f4f6;
+  --color-primary-dark: #e5e7eb;
+  --color-primary-glow: rgba(255, 255, 255, 0.1);
+
+  --color-accent: #ffffff;
+  --color-accent-light: #f3f4f6;
+
+  /* App ke different backgrounds, cards aur surface colors */
+  --color-bg: #0f0f11;
+  --color-bg-card: rgba(255, 255, 255, 0.03);
+  --color-bg-card-hover: rgba(255, 255, 255, 0.06);
+  --color-bg-elevated: rgba(255, 255, 255, 0.05);
+  --color-bg-input: rgba(255, 255, 255, 0.03);
+  --color-surface: #1a1a1c;
+
+  /* Borders ko subtle rakhne ke liye transparency use ki hai */
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-light: rgba(255, 255, 255, 0.05);
+
+  /* Text ke colors, main headings se le kar muted text tak */
+  --color-text: #ffffff;
+  --color-text-secondary: #d1d5db;
+  --color-text-muted: #9ca3af;
+  --color-text-inverse: #0f0f11;
+
+  /* Risk levels (Low, Medium, High) ke visual indicators */
+  --color-risk-low: #4ade80;
+  --color-risk-low-bg: rgba(74, 222, 128, 0.1);
+  --color-risk-medium: #fbbf24;
+  --color-risk-medium-bg: rgba(251, 191, 36, 0.1);
+  --color-risk-high: #f87171;
+  --color-risk-high-bg: rgba(248, 113, 113, 0.1);
+
+  /* Success, warning aur error states (Alerts waghera ke liye) */
+  --color-success: #4ade80;
+  --color-success-bg: rgba(74, 222, 128, 0.1);
+  --color-warning: #fbbf24;
+  --color-warning-bg: rgba(251, 191, 36, 0.1);
+  --color-error: #f87171;
+  --color-error-bg: rgba(248, 113, 113, 0.1);
+
+  /* Financial categories ke specific colors (Graphs/Charts mein kaam aayenge) */
+  --color-savings: #4ade80;
+  --color-investment: #60a5fa;
+  --color-insurance: #fbbf24;
+  --color-crypto: #f87171;
+
+  /* Spacing system taake margins aur paddings consistent rahein */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* Fonts setup (Primary sans-serif aur code/numbers ke liye monospace) */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Typography scale (Chotey text se le kar bari headings tak) */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 30px;
+  --text-4xl: 36px;
+
+  /* Font weights aur line heights */
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 800;
+
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+
+  /* Rounded corners (border-radius) ke variables */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Box shadows, UI elements ko thora 3D depth dene ke liye */
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 15px var(--color-primary-glow);
+  --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.3);
+
+  /* Transitions ki speed control, hover effects smooth banane ke liye */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* Z-index layers taake modals, dropdowns aur toasts sahi order mein dikhein */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+
+  /* Layout container ki max width aur navbar height */
+  --max-width: 1280px;
+  --navbar-height: 70px;
+}
+
+/* Custom CSS animations jo puri app mein components pe lag sakti hain */
+
+/* Elements ko thora neechay se fade in karwane ke liye */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal ya cards ko smoothly oopar slide karwane ke liye */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading spinner ko ghumane ke liye */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Elements (jaise skeleton loaders) mein thora pulsing effect dalne ke liye */
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Skeleton loaders ka shimmer/shine effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
