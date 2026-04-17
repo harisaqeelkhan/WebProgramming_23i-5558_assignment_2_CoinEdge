@@ -1,3 +1,8 @@
+## Muhammad Haris Khan
+## 23I-5558 - BFT6B
+## Course: Web Programming 
+
+
 # CoinEdge — Digital Asset Financial Hub 🚀
 **A modern, high-performance React application for live digital asset screening and portfolio simulation.**
 
@@ -26,10 +31,7 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
 ### Installation
 1.  Clone the repository or unzip the assignment folder.
-2.  Navigate to the project directory:
-    ```bash
-    cd "Assignment2"
-    ```
+2.  Navigate to the project directory
 3.  Install dependency packages:
     ```bash
     npm install
@@ -48,4 +50,4 @@ The codebase has been rigidly structured to segregate UI rendering from business
 *   `/src/utils/`: Pure analytical functions responsible for normalization, hashing, and mock financial calculus.
 
 ---
-*Built as a capstone submission for Web Programming Assignment 2.*
+*23I-5558*
